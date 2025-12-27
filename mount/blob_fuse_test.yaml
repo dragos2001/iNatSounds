@@ -1,0 +1,14 @@
+version: 2
+logging:
+  type: syslog
+components:
+  - libfuse
+  - azstorage
+libfuse:
+  allow_other: true
+azstorage:
+  account-name: mlworkspace1925296886
+  account-key: ${ACCOUNT_KEY}   # or use SAS token
+  container: test
+  auth-type: key
+  endpoint: ${ENDPOINT} 

@@ -30,9 +30,8 @@ class BCE(nn.Module):
         losses = self.loss_fn(self.sigmoid(pred), label_oh)
         return losses.sum() / batch_size
 
-def mask_prediction(prediction, mask):
-    mask = 1.0 * mask
-    return prediction * mask + prediction.min().item() * (1 - mask)
+
+
 
 def run_loop(args, dataloader, model, mode="train", optimizer=None, use_cuda=True, save_dir=None, ema_model=None, epoch=50, geo_model=None, test_geo_mask=False):
     num_classes = dataloader.num_classes

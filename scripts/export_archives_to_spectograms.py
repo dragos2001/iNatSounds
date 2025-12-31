@@ -21,7 +21,7 @@ def process_audio_bytes(args):
         output_dir = os.path.join(out_dir,member_group)
         os.makedirs(output_dir, exist_ok=True)
         output_path = os.path.join(output_dir, f"{base_name}_spectrogram_{i}")
-        save_spectogram_image(spectrogram, output_path)
+        save_spectogram_imagcelare(spectrogram, output_path)
     return 1
 
 def process_audio_from_tar(tar_path):

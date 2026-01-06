@@ -1,6 +1,6 @@
 import os
 import shutil
-from iNatSounds.scripts.select_dataset_groups import ( get_relevant_measurements, select_relevant_groups, )
+from iNatSounds.scripts.extra.select_dataset_groups import ( get_relevant_measurements, select_relevant_groups, )
 
 def delete_files(dir_path, relevant_groups):
     for file in os.listdir(dir_path):

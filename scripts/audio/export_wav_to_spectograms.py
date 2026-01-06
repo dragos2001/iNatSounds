@@ -6,7 +6,7 @@ from io import BytesIO
 from typing import BinaryIO
 import argparse
 import torchaudio
-from .spectogram import generate_spectogram, partition_audio_stream,save_spectogram_image
+from ..audio.spectogram import generate_spectogram, partition_audio_stream,save_spectogram_image
 
 def process_file(file_path, spectrogram_dir):
      

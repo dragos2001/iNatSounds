@@ -8,7 +8,6 @@ from typing import BinaryIO
 import cv2
 
 SR = 22050                # target sample rate
-
 WIN_SIZE = 512           # Hann window size
 HOP_SIZE = 128           # hop length
 FFT_SIZE = 1024          # FFT length
@@ -18,6 +17,7 @@ FMAX = SR // 2           # max frequency (11.025 kHz)
 WINDOW_SEC = 3.0         # window length in seconds
 STRIDE_SEC = 1.5         # stride (overlap)
 TARGET_IMG_SIZE = (224, 224)  # final image size
+
 
 def info_audio(audio_stream: BytesIO):
     waveform, sample_rate = torchaudio.load(audio_stream)
